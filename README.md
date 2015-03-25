@@ -12,4 +12,4 @@ linear features or additional higher order polynomial features.
 Higher order features approximate the decision boundary more closely: 
 
 ![Logistic regression with linear and polynomial model]
-(machine-learning/wgm-ex2/figures/data1_scatter.svg)
+(machine-learning/wgm-ex2/figures/data1_scatter.png)
