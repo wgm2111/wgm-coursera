@@ -7,9 +7,11 @@ website [Coursera](https://www.coursera.org).
 ## Machine Learning with Andrew Ng
 
 The second assignment involves some Logistic regression.  We can use
-linear features or additional higher order polynomial features.
+linear features or additional higher order polynomial features. Higher 
+order features approximate the decision boundary more closely.  
 
-Higher order features approximate the decision boundary more closely: 
+![First example of logistic regression with linear and polynomial model]
+(machine-learning/wgm-ex2/figures/data1_scatter.png)
 
-![Logistic regression with linear and polynomial model]
+![Second example of logistic regression with linear and polynomial model]
 (machine-learning/wgm-ex2/figures/data1_scatter.png)
