@@ -8,7 +8,7 @@ import scipy as sp
 import matplotlib.pyplot as plt
 
 from ex2data import data1, data2, X1, X2, y1, y2
-from ex2data1_regression import logistic_model_data1
+from ex2data1_regression import logistic_model_data1, logistic_poly_model_data1
 
 # output folder
 FOUT1 = "figures/data1_scatter.svg"
@@ -27,15 +27,23 @@ xplot, yplot = sp.array(data1[data1.ix[:,2]==0].ix[:, :2]).T
 ax1.plot(xplot, yplot, c='red', linewidth=0, marker='x',label='y=0') # plot the y=0 features
 
 # plot the probability function as a contour plot
+# --
 _x = sp.linspace(X1.min(), X1.max(), 250)
 xx, yy = sp.meshgrid(_x, _x)
 Xplot = sp.array([xx.reshape(-1), yy.reshape(-1)]).T
+
+# plot with only linear features
 out = (logistic_model_data1.predict_proba(Xplot)
        ).transpose().reshape(2, xx.shape[0], xx.shape[1])
 vals = out[1,:]
-ax1.contour(xx, yy, vals, levels=[.5])
+ax1.contour(xx, yy, vals, levels=[.5], label='linear fit')
 
-# ax1.contour(xx, yy)
+# plot a fit with quadratic featuers
+out = (logistic_poly_model_data1.predict_proba(Xplot)
+       ).transpose().reshape(2, xx.shape[0], xx.shape[1])
+vals = out[1,:]
+ax1.contour(xx, yy, vals, c='green', levels=[.5], label='quadradic fit')
+
 
 ax1.legend()
 ax1.set_title("Data set 1 for logistic regression")
