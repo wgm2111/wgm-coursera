@@ -14,4 +14,4 @@ order features approximate the decision boundary more closely.
 (machine-learning/wgm-ex2/figures/data1_scatter.png)
 
 ![Second example of logistic regression with linear and polynomial model]
-(machine-learning/wgm-ex2/figures/data1_scatter.png)
+(machine-learning/wgm-ex2/figures/data2_scatter.png)
