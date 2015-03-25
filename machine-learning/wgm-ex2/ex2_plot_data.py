@@ -11,8 +11,8 @@ from ex2data import data1, data2, X1, X2, y1, y2
 from ex2data1_regression import logistic_model_data1, logistic_poly_model_data1
 
 # output folder
-FOUT1 = "figures/data1_scatter.svg"
-FOUT2 = "figures/data2_scatter.svg"
+FOUT1 = "figures/data1_scatter.png"
+FOUT2 = "figures/data2_scatter.png"
 
 
 # Make a figure for the first data set

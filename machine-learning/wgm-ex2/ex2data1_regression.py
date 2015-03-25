@@ -21,7 +21,4 @@ model = Pipeline([('poly', PolynomialFeatures(degree=2)),
                   ('linear', linear_model.LogisticRegression(fit_intercept=False))])
 logistic_poly_model_data1 = model.fit(X1, y1)
 
-# poly = PolynomialFeatures(degree=2)
-# X1poly = poly.fit_transform(X1)
-
 
